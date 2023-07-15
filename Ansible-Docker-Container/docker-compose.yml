@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  ansible:
+    image: ubuntu:22.04
+    build:
+      context: .
+      dockerfile: Dockerfile
+    tty: true
+    stdin_open: true
+    networks:
+      - net
+
+networks:
+  net:
