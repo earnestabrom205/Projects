@@ -1,12 +1,13 @@
-# Project-207 : Web Page Application (Postgresql-Nodejs-React) deployed on EC2's with Ansible and Docker
+# Ansible Docker Project: Web Page Application (Postgresql-Nodejs-React) deployed on EC2's with Ansible and Docker
 
 ## Description
-
-The Clarusway Web-Page Application aims to deploy web-page written Nodejs and React Frameworks on AWS Cloud Infrastructure using Ansible. Building infrastructure process is managing with control node utilizing Ansible. This infrastructure has 1 control node and 3 EC2's as worker node. These EC2's will be launched on AWS console. Web-page has 3 main components which are postgresql, nodejs, and react. Each component is serving in Docker container on EC2s dedicated for them. Postgresql is serving as Database of web-page. Nodejs controls backend part of web-side and react controls frontend side of web-page. The code was written by Clarusway's Developers and architecture will be created by Clarusway's AWS & DevOps Team.
+This is a project that I was apart of while attending Clarusway Online Bootcamp. My role in this project was to build the infrastructure on AWs using terraform to deploy the underlying infrastructure. I did not create the application code that was done by the Software Developement team. The Clarusway Web-Page Application aims to deploy web-page written Nodejs and React Frameworks on AWS Cloud Infrastructure using Ansible. Configuring the infrastructure was done by managing via the control node utilizing Ansible. This infrastructure has 1 control node and 3 EC2's as worker node. These EC2's will be launched on AWS console. Web-page has 3 main components which are postgresql, nodejs, and react. Each component is serving in Docker containers on EC2s dedicated for them. Postgresql is serving as Database of web-page. Nodejs controls backend part of web-side and react controls frontend side of web-page. The code was written by Clarusway's Developers and architecture was created by myself.
 
 ## Problem Statement
 
-![Project_007](ansible.png)
+![Ansible Docker Project](ansible.png)
+
+Below is the problem statement as given by my instructors:
 
 - Clarusway has recently ended up a project that aims to serve as web page. You and your colleagues are assigned to work on this project. Clarusway Developer team has done with code and DevOps team is going to deploy the app in production environment using ansible.
 
@@ -84,7 +85,7 @@ In the architecture, you can configure your architecture with these conditions,
 ## Project Skeleton 
 
 ```text
-007:clarusway_ansible_proj (folder)
+Ansible Docker Project:clarusway_ansible_proj (folder)
 |
 |----Readme.md               # Given to the students (Definition of the project)
 |----todo-app-perm (folder)  # Given to the students (Nodejs and React files)
@@ -119,11 +120,9 @@ In the architecture, you can configure your architecture with these conditions,
 
 - Git & Github for Version Control System
 
-### At the end of the project, students will be able to;
+### At the end of the project, I was able to;
 
 - Write Ansible playbook in different ways which are without Roles and with Roles
-
-- Apply web programming skills, importing packages within Nodejs and React Frameworks
 
 - Write Dockerfiles for different environments
 
