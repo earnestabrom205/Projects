@@ -65,8 +65,8 @@ resource "aws_instance" "tf-docker-ec2" {
           chmod +x /usr/local/bin/docker-compose  
           mkdir -p /home/ec2-user/bookstore-api
           cd /home/ec2-user/bookstore-api          
-          TOKEN="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"
-          FOLDER="https://$TOKEN@raw.githubusercontent.com/davidclarusway/bookstore-repo/main/"
+          TOKEN="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"
+          FOLDER="https://$TOKEN@raw.githubusercontent.com/earnestabrom205/bookstore-repo/main/"
           curl -s -o bookstore-api.py -L "$FOLDER"bookstore-api.py 
           curl -s -o Dockerfile -L "$FOLDER"Dockerfile 
           curl -s -o docker-compose.yml -L "$FOLDER"docker-compose.yml 
