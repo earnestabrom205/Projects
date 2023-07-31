@@ -19,7 +19,7 @@ provider "aws" {
 }
 
 provider "github" {
-    token = "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"
+    token = var.git_token
   
 }
 
@@ -34,10 +34,6 @@ resource "github_branch_default" "main" {
     repository = github_repository.myrepo.name  
 }
 
-variable "files" {
-    default = ["bookstore-api.py", "Dockerfile", "docker-compose.yml", "requirements.txt"]
-  
-}
 
 resource "github_repository_file" "myfiles" {
     for_each = toset(var.files)    
@@ -52,10 +48,10 @@ resource "github_repository_file" "myfiles" {
 resource "aws_instance" "tf-docker-ec2" {
     ami = "ami-0f9fc25dd2506cf6d"
     instance_type = "t2.micro"
-    key_name = "davidskey"
-    security_groups = ["david-docker-sec-gr-203"] # !!!!!!!!!!!!
+    key_name = var.mykey
+    security_groups = ["ea-docker-sec-gr"] # !!!!!!!!!!!!
     tags = {
-        Name = "david-Web Server of Bookstore"
+        Name = "earnest-Web Server of Bookstore"
     }
     user_data = <<-EOF
           #! /bin/bash
@@ -69,7 +65,7 @@ resource "aws_instance" "tf-docker-ec2" {
           chmod +x /usr/local/bin/docker-compose  
           mkdir -p /home/ec2-user/bookstore-api
           cd /home/ec2-user/bookstore-api          
-          TOKEN="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"
+          TOKEN="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"
           FOLDER="https://$TOKEN@raw.githubusercontent.com/davidclarusway/bookstore-repo/main/"
           curl -s -o bookstore-api.py -L "$FOLDER"bookstore-api.py 
           curl -s -o Dockerfile -L "$FOLDER"Dockerfile 
@@ -83,9 +79,9 @@ resource "aws_instance" "tf-docker-ec2" {
 }
 
 resource "aws_security_group" "tf-docker-ec2-sec-gr" {
-    name = "david-docker-sec-gr-203"
+    name = "earnest-docker-sec-gr"
     tags = {
-      "Name" = "docker-sec-gr-203"
+      "Name" = "docker-sec-gr"
     }
     ingress {
         from_port = 80
