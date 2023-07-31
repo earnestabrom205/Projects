@@ -1,4 +1,4 @@
-# Project-203: Dockerization of Bookstore Web API (Python Flask) with MySQL
+# Docker-Bookstore-Project: Dockerization of Bookstore Web API (Python Flask) with MySQL
 
 ## Description
 
@@ -6,7 +6,10 @@ Bookstore Web API Application aims to create a bookstore web service using Docke
 
 ## Problem Statement
 
-![Project_203](203-bookstore-api.png) 
+![Docker-Bookstore-Project](203-bookstore-api.png)
+
+This is a project created by Clarusway Online Bootcamp. The application code was developed by Software Development students.  The infrastructure, SCM, and dockerization was done by myself.
+Below is the Problem Statement given to AWS/DevOps students, which I was:
 
 - Your team has started working on a project to create a `Bookstore` Application as Web Service.  
 
